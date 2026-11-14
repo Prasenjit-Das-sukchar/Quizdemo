@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How Well Do You Know Prasenjit? ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="container">
+        <section id="welcome" aria-labelledby="welcomeTitle">
+            <div class="heart" aria-hidden="true">💜</div>
+            <h1 id="welcomeTitle">How Well Do You Know Prasenjit?</h1>
+            <p class="subtitle">Let's find out how much you really know about me! 😉</p>
+            <img class="photo" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=900" alt="Welcome photo">
+            <h2 class="ready-title">Are You Ready? 👀</h2>
+            <p class="intro-copy">
+                10 interesting questions.<br>
+                4 options for each question.<br>
+                Only one correct answer! ❤️<br><br>
+                Let's see if you are a real Prasenjit expert!
+            </p>
+            <form id="leaderboardForm" class="leaderboard-form">
+                <h2>Enter Your Details to Start</h2>
+                <label for="participantName">Your name</label>
+                <input id="participantName" name="name" type="text" autocomplete="name" required>
+                <label for="relationship">Your relationship with Prasenjit</label>
+                <input id="relationship" name="relationship" type="text" required>
+                <label for="phoneNumber">Phone number</label>
+                <input id="phoneNumber" name="phone" type="tel" autocomplete="tel" required>
+                <button class="start-btn" id="startBtn" type="submit">Start the Quiz 🚀</button>
+                <p id="leaderboardStatus" class="leaderboard-status" aria-live="polite"></p>
+            </form>
+        </section>
+
+        <section id="quiz" class="hidden" aria-labelledby="quizTitle">
+            <h1 id="quizTitle">Prasenjit Quiz ❤️</h1>
+            <div class="progress-info">
+                <span id="questionNumber"></span>
+                <span id="progressPercent"></span>
+            </div>
+            <div class="progress" role="progressbar" aria-label="Quiz progress" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+            <img id="questionPhoto" class="photo" src="" alt="Question">
+            <div class="question" id="questionText" aria-live="polite"></div>
+            <div class="options" id="options"></div>
+            <div class="feedback" id="feedback" aria-live="polite"></div>
+            <div class="buttons">
+                <button class="back-btn" id="backBtn" type="button">← Back</button>
+                <button class="next-btn" id="nextBtn" type="button" disabled>Next →</button>
+            </div>
+        </section>
+
+        <section id="result" class="hidden" aria-labelledby="resultHeading">
+            <div class="result-icon" id="resultIcon" aria-hidden="true">🏆</div>
+            <h1 id="resultHeading">Quiz Completed!</h1>
+            <p class="subtitle">Your Prasenjit knowledge report ❤️</p>
+            <div class="score" id="finalScore">0/10</div>
+            <h2 id="resultTitle"></h2>
+            <div class="result-message" id="resultMessage"></div>
+            <p class="percentage-copy">You got <b id="percentage"></b> correct!</p>
+
+            <section class="leaderboard" aria-labelledby="leaderboardTitle">
+                <h2 id="leaderboardTitle">🏆 Leaderboard</h2>
+                <p id="leaderboardResultStatus" class="leaderboard-status" aria-live="polite"></p>
+                <ol id="leaderboardList"></ol>
+            </section>
+
+            <button class="restart-btn" id="restartBtn" type="button">🔄 Play Again</button>
+            <button class="review-toggle back-btn" id="reviewBtn" type="button" aria-expanded="false" aria-controls="answerReview">📝 See Correct Answers</button>
+            <div id="answerReview" class="answer-review hidden"></div>
+        </section>
+
+        <footer class="footer">Made with ❤️ for Prasenjit</footer>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
